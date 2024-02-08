@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Forest Fire Prediction</title>
+  <link rel="icon" href="https://image.flaticon.com/icons/svg/2950/2950411.svg" type="image/icon type">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="head">
+        <h1 style="font-size: 70px;"> <strong> FOREST FIRE PREDICTION </strong></h1>
+        <h2 style="padding-top: 20px;">Safeguarding the Wild: Precision in Prediction, Excellence in Protection</h2>
+    </div>
+    <div class="middle">
+        <a href="{{ url_for('preprocessing') }}">Preprocessing</a>
+    <a href="{{ url_for('forest_fire') }}">Prediction</a>
+    <a href="{{ url_for('safety') }}">Safety</a>
+    <a href="{{ url_for('wildlife') }}" >Analysis</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Wildlife Representation</title>
+  <link rel="icon" href="https://image.flaticon.com/icons/svg/2950/2950411.svg" type="image/icon type">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+  <style>
+    /* Hide the image initially */
+    #displayedImage {
+        display: none;
+        max-width: 100%;
+        height: auto;
+    }
+</style>
+</head>
+<body>
+  <div class="topnav">
+    <a href="{{ url_for('preprocessing') }}">Preprocessing</a>
+    <a href="{{ url_for('forest_fire') }}">Prediction</a>
+    <a href="{{ url_for('safety') }}">Safety</a>
+    <a href="{{ url_for('wildlife') }}" >Analysis</a>
+
+    
+    
+
+  </div>
+  <div class="opt">
+  <label for="imageDropdown" style="color: white; margin-top: 20px; font-size: 50px;">CHECK THE ACCURACY</label>
+  <select id="imageDropdown" onchange="displayImage()">
+      <option value="option1">Support Vector Machine</option>
+      <option value="option2">Logistic Regression</option>
+      <option value="option3">Random Forest Classifier</option>
+      <option value="option4">Decision Tree Classifier</option>
+      <option value="option5">Naive Bayes Classifier</option>
+      <option value="option6">Final Comparison</option>
+
+
+  </select>
+</div>
+<div class="graph">
+  <!-- Displayed image -->
+  <img id="displayedImage" style="height: 400px; margin-bottom: 20px; margin-left: 150px;" src="" alt="Displayed Image "  >
+
+  <script>
+      function displayImage() {
+          // Get the selected option
+          var selectedOption = document.getElementById("imageDropdown").value;
+
+          // Get the image element
+          var imageElement = document.getElementById("displayedImage");
+
+          // Set the source of the image based on the selected option
+          switch (selectedOption) {
+              case "option1":
+                  imageElement.src = "{{ url_for('static', filename='css/images/svvm.png') }}";
+                  break;
+              case "option2":
+                  imageElement.src = "{{ url_for('static', filename='css/images/log.png') }}"; // Replace with the actual image path
+                  break;
+              case "option3":
+                  imageElement.src = "{{ url_for('static', filename='css/images/random.png') }}"; // Replace with the actual image path
+                  break;
+              case "option4":
+                  imageElement.src = "{{ url_for('static', filename='css/images/decision.png') }}"; // Replace with the actual image path
+                  break;
+              case "option5":
+                  imageElement.src = "{{ url_for('static', filename='css/images/naive.png') }}"; // Replace with the actual image path
+                  break;
+              case "option6":
+                  imageElement.src = "{{ url_for('static', filename='css/images/aml_graph.png') }}"; // Replace with the actual image path
+                  break;
+              default:
+                  // Hide the image if no valid option is selected
+                  imageElement.src = "";
+          }
+
+          // Show or hide the image based on whether an option is selected
+          imageElement.style.display = selectedOption === "" ? "none" : "block";
+      }
+  </script>
+  </div>  
+</body>
+</html>

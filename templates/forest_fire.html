@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Forest Fire Prediction</title>
+  <link rel="icon" href="https://image.flaticon.com/icons/svg/2950/2950411.svg" type="image/icon type">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body >
+
+<div class="topnav" >
+  <a href="{{ url_for('preprocessing') }}">Preprocessing</a>
+  <a href="{{ url_for('forest_fire') }}">Prediction</a>
+  <a href="{{ url_for('safety') }}">Safety</a>
+  <a href="{{ url_for('wildlife') }}" >Analysis</a>
+</div>
+  <div class="prediction">
+  <h1 style="color: lightsalmon; text-align: center;">Forest Fire Prediction</h1>
+  <h5 style="color: lightsalmon; text-align: center;">Predict the percentage of Forest-Fire Occurence</h5>
+  <form action='/predict' method="post">
+   <div class="submain">
+    <div class="sizes">
+          <div>
+            <label for="exampleInputEmail1">Oxygen</label> 
+            <input id="last_name" name="Oxygen" placeholder="Oxygen content: High=1,Low=0"  type="text" class="validate form-control border border-warning">
+          </div>
+          <br>
+          <div>
+            <label for="exampleInputEmail1">Temperature</label>
+            <input  class="form-control validate border border-warning" placeholder="Temperature: High=1,Low=0" name="Temperature" id="first_name" type="text" >
+          </div>
+          <br>
+          <div>
+            <label for="exampleInputEmail1">Humidity</label>
+            <input  id="_name" name="Humidity" placeholder="Humidity: High=1,Low=0" type="text" class="validate form-control border border-warning">
+          </div>
+          <br>
+          <div>
+
+            <label for="exampleInputEmail1">Wind Speed</label>
+            <input  class="form-control validate border border-warning" placeholder="Wind Speed: High=1,Low=0 " name="Wind Speed" id="first_name" type="text" >
+          </div>
+     </div>
+    <div class="sizes2">
+      <div>
+        <label for="exampleInputEmail1">Drought</label>
+        <input  class="form-control validate border border-warning" placeholder="Enter the drought scenario: High=1,Low=0" name="Drought" id="first_name" type="text" >
+      </div>
+      <br>
+      <div>
+        <label for="exampleInputEmail1">Topography</label>
+        <input  class="form-control validate border border-warning" placeholder="Topography: High=1,Low=0" name="Topography" id="first_name" type="text" >
+      </div>
+      <br>
+      <div>
+        <label for="exampleInputEmail1">Intensity</label>
+        <input  class="form-control validate border border-warning" placeholder="Enter the Intensity: High=1,Low=0 " name="Intensity" id="first_name" type="text" >
+      </div>
+    </div>
+          
+        
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="button" >
+        <button type="submit" class="button">Predict</button>
+        </div>
+     
+     <div>
+      <h4 class="prediction">{{pred}}</h4>
+     </div>
+   
+  </form>
+  </div>
+
+
+  <br/>
+
+
+  
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src=".js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+  </body>
+</html>
+

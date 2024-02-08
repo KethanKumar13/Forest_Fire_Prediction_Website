@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" href="https://image.flaticon.com/icons/svg/2950/2950411.svg" type="image/icon type">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="topnav">
+        <a href="{{ url_for('preprocessing') }}">Preprocessing</a>
+    <a href="{{ url_for('forest_fire') }}">Prediction</a>
+    <a href="{{ url_for('safety') }}">Safety</a>
+    <a href="{{ url_for('wildlife') }}" >Analysis</a>
+
+    </div>
+
+    <!-- Content for the website -->
+    <div style="color: white; margin-right: 50px; margin-left: 50px; font-size: large;">
+        <h2>SAFETY PRECAUTIONS</h2>
+        <ol type="1">
+            <li> <b> Stay Calm:</b> Try to remain as calm as possible. Panic can impair judgment and decision-making.</li>
+            <li><b>Call Emergency Services:</b> Dial the emergency services number immediately to report the fire. Provide your location and any relevant details about the fire's location and size.
+            </li>
+            <li>           <b> Evacuate Immediately:</b> If you are in the path of the fire, leave the area as quickly and safely as possible. Follow designated evacuation routes, if available.
+            </li>
+            <li>            <b>Follow Authorities' Instructions:</b> Stay tuned to local radio or TV stations for updates and evacuation orders. Follow the instructions given by emergency personnel.
+            </li>
+            <li>            <b>Inform Others:</b> If you know of others in the area, inform them about the fire and the need to evacuate if they are unaware.
+            </li>
+            <li>            <b>Wear Protective Clothing:</b> If you must evacuate through smoke or fire, wear long-sleeved shirts, long pants, a hat, goggles, and a handkerchief or filter mask to protect your lungs.
+            </li>
+            <li>            <b>Close Windows and Doors:</b> If you leave your home, close all windows and doors to prevent drafts. Open dampers in fireplaces but close fireplace screens.
+            </li>
+            <li>            <b>Shut Off Gas:</b> Turn off the gas supply at the source before leaving your property if authorities advise you to do so.
+            </li>
+            <li>            <b>Take Important Documents:</b> If time allows, take important documents like identification, insurance papers, medical records, and prescriptions.
+            </li>
+            <li>            <b>Create a Safety Zone:</b> If escape routes are cut off and you cannot evacuate, create a safety zone in a cleared area away from trees, brush, and other flammable materials. Clear a space down to bare soil around you.
+            </li>
+            <li>            <b>Stay Low:</b> If you are trapped in smoke, get down as low to the ground as possible, especially if you are having trouble breathing.
+            </li>
+            <li>            <b>Stay Informed:</b> Keep listening to emergency broadcasts for updates on the fire’s location and behavior.
+            </li>
+            <li>            <b>Do Not Return Home Until Cleared:</b> Do not return home until authorities declare the area safe. Even after the fire is out, there can be hazards such as hot spots and unstable structures.
+            </li>
+        </ol>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+    </div>
+</body>
+</html>
